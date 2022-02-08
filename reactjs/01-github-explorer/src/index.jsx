@@ -1,6 +1,8 @@
 
-import React from 'react';
+import { render } from 'react-dom';
+import { App } from './App';
+// A funcao de renderizar o primeiro parametro é o que quer exibir em tela (renderizar)
+//segundo parametro é dentro de qual elemento vai renderizar essa informacao 
 
-function App() {
-    return <h1> Hello World! </h1>
-}
+render(<App />, document.getElementById('root'))
+
