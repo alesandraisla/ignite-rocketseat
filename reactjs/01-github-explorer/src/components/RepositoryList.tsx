@@ -1,19 +1,16 @@
-// const repositoryName = 'uniform2';
-
 import { RepositoryItem } from "./RepositoryItem";
 import { useState } from 'react';
 import '../styles/repositories.scss';
 import { useEffect } from "react";
 
-// estática
-// const repository = {
-//     name: 'uniform',
-//     descripton: 'Forms in React',
-//     link: 'https://github.com/unform/unform'
-// }
+interface Repository {
+    name: string;
+    descripton: string;
+    html_url: string;
+}
 
 export function RepositoryList() {
-    const [repositories, setRepositories] = useState([])
+    const [repositories, setRepositories] = useState<Repository[]>([])
 
     useEffect(() => {
         fetch('https://api.github.com/orgs/rocketseat/repos')

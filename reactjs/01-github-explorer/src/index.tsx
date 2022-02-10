@@ -5,4 +5,3 @@ import { App } from './App';
 //segundo parametro é dentro de qual elemento vai renderizar essa informacao 
 
 render(<App />, document.getElementById('root'))
-
